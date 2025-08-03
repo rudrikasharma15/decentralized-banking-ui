@@ -95,14 +95,6 @@ This project is licensed under the **MIT License**.
 
 ---
 
-## 💬 Contact
-
-* 📧 Email: [rudrikasharma1503@gmail.com](mailto:rudrikasharma1503@gmail.com)
-* 🔗 [LinkedIn]([in/rudrika-sharma-514490271](https://www.linkedin.com/in/rudrika-sharma-514490271/))
-* 📝 [Medium](https://medium.com/@rudrikasharma1503)
-
----
-
 > “Transform your banking experience with decentralized trust, privacy, and intelligence.”
 
 ```
