@@ -1,63 +1,113 @@
-# 💻 decentralized-banking-ui
-
-🚀 **Hackathon-Winning Project**
-🔗 **Live Demo**: [View App](https://decentralized-banking-ui-uh3s.vercel.app)
-
-> Frontend for a next-gen decentralized banking system blending **AI**, **blockchain**, and **finance**—built with privacy-first onboarding, stablecoin transfers, and intelligent financial tooling.
 
 ---
 
-## 🌟 Core Features
+````md
+# 💻 Decentralized Banking UI
 
-* 🔐 **ZK-based OneKYC**: AI + OCR onboarding with Zero-Knowledge Proof for user privacy
-* 💸 **RupeeX Wallet**: Fast, stablecoin-based transactions
-* 🛂 **Reputation Passport**: Shareable, decentralized financial trust score
-* ✅ **Consent Ledger**: Track and manage your data-sharing consent
-* 🧠 **CitiGPT**: AI-powered assistant for smart financial decision-making
+🚀 **Hackathon-Winning Project** • [🌐 Live Demo](https://decentralized-banking-ui-uh3s.vercel.app)
 
----
-
-## 🧰 Tech Stack
-
-| Category             | Tools Used                         |
-| -------------------- | ---------------------------------- |
-| **Framework**        | React + Vite                       |
-| **Styling**          | Tailwind CSS, ShadCN UI            |
-| **State Management** | React Context API                  |
-| **Wallet Support**   | MetaMask, WalletConnect            |
-| **Blockchain**       | ethers.js                          |
-| **AI Integration**   | LangChain + OpenAI *(via backend)* |
+Frontend for a next-gen decentralized banking system combining traditional finance, AI, and blockchain.
 
 ---
 
-## ⚙️ Getting Started
+## 🌟 Key Features
 
-### 1. Clone the repository
+- 🔐 **OneKYC with ZKPs**: AI-powered onboarding using OCR, facial scan, and Zero-Knowledge Proofs for privacy-first identity.
+- 💰 **RupeeX Stablecoin**: INR-pegged, fiat-backed ERC-20 token for secure and instant transactions.
+- 🪪 **Reputation Passport**: Decentralized, shareable wallet storing your financial data, issued as Soulbound NFTs and DIDs.
+- 📜 **Consent Ledger**: Tamper-proof history of data access using IPFS and Merkle Trees.
+- 🎓 **Smart Loans**: Purpose-bound scholarships/loans usable only at verified institutions.
+- 🤖 **CitiGPT**: AI assistant for investment guidance and smart contract interaction.
+
+---
+
+## ⚙️ Tech Stack
+
+### 🧠 AI/ML
+- OCR, Facial Recognition
+- Langchain + OpenAI
+- RAG + AI Agents (`CitiGPT`)
+
+### 🔐 Privacy
+- Zero-Knowledge Proofs (Semaphore)
+- Merkle Trees, IPFS
+
+### 💻 Frontend
+- React + Vite
+- Tailwind CSS, Heroicons
+- React Router, Framer Motion
+- Wallet Integration: MetaMask / WalletConnect
+
+---
+
+## 🛠️ Getting Started (Frontend Only)
 
 ```bash
-git clone https://github.com/your-username/decentralized-banking-ui.git
+# 1. Clone the repo
+git clone https://github.com/YOUR_USERNAME/decentralized-banking-ui.git
 cd decentralized-banking-ui
-```
 
-### 2. Install dependencies (with legacy peer support)
-
-```bash
+# 2. Install dependencies (with legacy peer support)
 npm install --legacy-peer-deps
-```
 
-### 3. Run the application
+# 3. Start the development server
+npm run dev
 
-```bash
+# 4. Or build and start in production
+npm run build
 npm start
-```
-
-> ℹ️ `npm start` is configured to launch the development server using Vite.
+````
 
 ---
 
-## 📌 Notes
+## 📂 Project Structure
 
-* This repo only contains the **frontend**. AI logic, KYC backend, and blockchain interactions happen via external APIs.
-* Deployment is handled via **Vercel**.
+```
+.
+├── public/             # Static files
+├── src/
+│   ├── assets/         # Illustrations and media
+│   ├── components/     # Reusable UI components
+│   ├── context/        # React Contexts
+│   ├── pages/          # Main screens (Login, Dashboard, etc.)
+│   ├── App.jsx         # Main App layout
+│   └── main.jsx        # ReactDOM entry
+├── package.json
+└── README.md
+```
+
+---
+
+## 🛡️ Backend + Smart Contract Stack (Overview)
+
+* **Smart Contracts**: Solidity, Web3.py, Ganache
+* **Backend**: Node.js, Express, MongoDB, dotenv
+* **Blockchain Interaction**: `ethers.js`, MetaMask
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For significant changes, please open an issue first.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 💬 Contact
+
+* 📧 Email: [rudrikasharma.official@gmail.com](mailto:rudrikasharma.official@gmail.com)
+* 🔗 [LinkedIn](https://www.linkedin.com/in/rudrika-sharma)
+* 📝 [Medium](https://medium.com/@rudrikasharma.official)
+
+---
+
+> “Transform your banking experience with decentralized trust, privacy, and intelligence.”
+
+```
 
 ---
