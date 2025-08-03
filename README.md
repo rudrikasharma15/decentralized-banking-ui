@@ -94,7 +94,7 @@ Pull requests are welcome! For significant changes, please open an issue first.
 This project is licensed under the **MIT License**.
 
 ---
-
+```
 > “Transform your banking experience with decentralized trust, privacy, and intelligence.”
 
 ```
