@@ -97,9 +97,9 @@ This project is licensed under the **MIT License**.
 
 ## 💬 Contact
 
-* 📧 Email: [rudrikasharma.official@gmail.com](mailto:rudrikasharma.official@gmail.com)
-* 🔗 [LinkedIn](https://www.linkedin.com/in/rudrika-sharma)
-* 📝 [Medium](https://medium.com/@rudrikasharma.official)
+* 📧 Email: [rudrikasharma.official@gmail.com](mailto:rudrikasharma1503@gmail.com)
+* 🔗 [LinkedIn](in/rudrika-sharma-514490271)
+* 📝 [Medium]([https://medium.com/@rudrikasharma.official](https://medium.com/@rudrikasharma1503))
 
 ---
 
