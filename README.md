@@ -1,7 +1,4 @@
 
----
-
-````md
 # 💻 Decentralized Banking UI
 
 🚀 **Hackathon-Winning Project** • [🌐 Live Demo](https://decentralized-banking-ui-uh3s.vercel.app)
