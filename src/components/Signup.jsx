@@ -9,8 +9,7 @@ export default function Signup() {
     email: "",
     phone: "",
     aadhar: "",
-  pan: "",
-    otp: "",
+    pan: "",
     password: "",
     confirmPassword: "",
     acceptedTerms: false,
@@ -25,33 +24,29 @@ export default function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  if (
-  !form.email.includes("@") ||
-  form.password.length < 8 ||
-  form.password !== form.confirmPassword ||
-  form.phone.length < 10 ||
-  form.otp.length < 4 ||
-  form.aadhar.length !== 12 ||
-  !/^[0-9]{12}$/.test(form.aadhar) ||
-  !/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(form.pan.toUpperCase()) ||
-  !form.acceptedTerms
-) {
-  setError("Please fill all fields correctly and accept the terms.");
-  return;
-}
 
+    if (
+      !form.email.includes("@") ||
+      form.password.length < 8 ||
+      form.password !== form.confirmPassword ||
+      form.phone.length < 10 ||
+      form.aadhar.length !== 12 ||
+      !/^[0-9]{12}$/.test(form.aadhar) ||
+      !/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(form.pan.toUpperCase()) ||
+      !form.acceptedTerms
+    ) {
+      setError("Please fill all fields correctly and accept the terms.");
+      return;
+    }
 
     setError("");
-    alert("Signup successful!");
-    // save user data in browser to be accessed later
     localStorage.setItem("user", JSON.stringify(form));
-    console.log("User data saved:", form);
+    alert("Signup successful!");
     navigate("/kyc/start");
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#040D25] to-[#1E40AF] flex items-center justify-center px-6 relative overflow-hidden">
-      {/* Background blobs same as login */}
       <motion.div
         className="absolute w-96 h-96 rounded-full opacity-20 blur-3xl top-[-10%] left-[-10%]"
         style={{
@@ -77,8 +72,7 @@ export default function Signup() {
         }}
       ></motion.div>
 
-      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center md:items-center justify-center gap-24 z-10">
-        {/* Floating Illustration */}
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center justify-center gap-24 z-10">
         <motion.div
           initial={{ opacity: 1, scale: 0.95, y: 0 }}
           animate={{ scale: 1, y: [-15, 15, -15] }}
@@ -93,7 +87,6 @@ export default function Signup() {
           />
         </motion.div>
 
-        {/* Signup form container */}
         <div
           className="w-full max-w-xl bg-white/10 backdrop-blur-xl border rounded-3xl p-12 space-y-8"
           style={{
@@ -102,15 +95,12 @@ export default function Signup() {
           }}
         >
           <h2 className="text-4xl font-extrabold text-center text-white drop-shadow-lg tracking-wide">
-            Create your <span className="text-indigo-400">CitiChain</span>{" "}
-            account
+            Create your <span className="text-indigo-400">CitiChain</span> account
           </h2>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label className="text-sm font-medium text-white/80">
-                Full Name
-              </label>
+              <label className="text-sm font-medium text-white/80">Full Name</label>
               <input
                 type="text"
                 name="name"
@@ -122,11 +112,35 @@ export default function Signup() {
               />
             </div>
 
+            <div>
+              <label className="text-sm font-medium text-white/80">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="mt-1 w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              />
+            </div>
+
+            <div>
+              <label className="text-sm font-medium text-white/80">Phone</label>
+              <input
+                type="text"
+                name="phone"
+                placeholder="9876543210"
+                value={form.phone}
+                onChange={handleChange}
+                required
+                className="mt-1 w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              />
+            </div>
+
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium text-white/80">
-                  Aadhar Number
-                </label>
+                <label className="text-sm font-medium text-white/80">Aadhar Number</label>
                 <input
                   type="text"
                   name="aadhar"
@@ -138,9 +152,7 @@ export default function Signup() {
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-white/80">
-                  PAN Number
-                </label>
+                <label className="text-sm font-medium text-white/80">PAN Number</label>
                 <input
                   type="text"
                   name="pan"
@@ -155,33 +167,7 @@ export default function Signup() {
 
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium text-white/80">OTP</label>
-                <input
-                  type="text"
-                  name="otp"
-                  placeholder="1234"
-                  value={form.otp}
-                  onChange={handleChange}
-                  required
-                  className="mt-1 w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                />
-              </div>
-              <div className="flex items-end">
-                <button
-                  type="button"
-                  onClick={() => alert("OTP sent to phone")}
-                  className="w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-indigo-500/40 transition-transform duration-300"
-                >
-                  Send OTP
-                </button>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <label className="text-sm font-medium text-white/80">
-                  Password
-                </label>
+                <label className="text-sm font-medium text-white/80">Password</label>
                 <input
                   type="password"
                   name="password"
@@ -193,9 +179,7 @@ export default function Signup() {
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-white/80">
-                  Confirm Password
-                </label>
+                <label className="text-sm font-medium text-white/80">Confirm Password</label>
                 <input
                   type="password"
                   name="confirmPassword"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-// import emailIllustration from "../assets/undraw_certification_i2m0.svg";
+import emailIllustration from "../assets/undraw_certification_i2m0.svg";
 
 export default function PassportStatusEntry() {
   const navigate = useNavigate();
